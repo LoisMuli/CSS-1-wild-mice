@@ -1,20 +1,20 @@
 #!/usr/bin/bash
 
-#软件路径
+# software path
 trimmomatic=/home/GT20286/software/Trimmomatic-0.39/trimmomatic-0.39.jar
 
-##shell执行参数
+## parameters
 fq1=$1
 fq2=$2
-outdir=$3 #输出文件的路径,最好以样本名命名
-RGID=$4 # 所得文件命名
+outdir=$3 # output path, better named the same as sample name
+RGID=$4 # output name
 
-#output diretory 无文件夹就新建
+#output directory
 if [ ! -d $outdir/trim ]
 then mkdir -p $outdir/trim
 fi
 
-##Trimmomatic质控
+##Trimmomatic
 time java -jar ${trimmomatic} PE \
 $fq1 $fq2 \
 $outdir/trim/${RGID}_1.clean.fastq.gz $outdir/trim/${RGID}_1.unpaired.fastq.gz \
