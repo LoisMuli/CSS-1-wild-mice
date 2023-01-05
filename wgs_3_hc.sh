@@ -1,18 +1,19 @@
 #!/usr/bin/bash
 
+# path
 reference=/home/GT20286/reference/reference_C57B6J
 gatk_bundle=/home/GT20286/reference/gatk_bundle/b6/snps
 
-##shell执行参数
-inpdir=$1 #输入文件路径
-outdir=$2 #输出文件的路径
+##parameters
+inpdir=$1 #input path
+outdir=$2 # output path
 
-#output diretory 无文件夹就新建
+#output directory
 if [ ! -d $outdir/gatk ]
 then mkdir -p $outdir/gatk
 fi
 
-# 变异检测
+# haplotype caller
 ls $inpdir/*.sorted.markdup.bam | cut -d"/" -f 7 | cut -d"." -f 1 | while read id
 do
 gatk HaplotypeCaller \
@@ -20,4 +21,3 @@ gatk HaplotypeCaller \
 -I $1/${id}.sorted.markdup.bam \
 -O $2/gatk/${id}.hc.vcf.gz
 done
-
