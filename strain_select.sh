@@ -1,11 +1,11 @@
 #!usr/bin/bash
 
-#参数
+#parameters
 samplename=$1
 splitfile=$2
 outdir=$3
 
-#output diretory 无文件夹就新建
+#output directory
 if [ ! -d $outdir/si${samplename} ]
 then mkdir -p $outdir/si${samplename}
 fi
