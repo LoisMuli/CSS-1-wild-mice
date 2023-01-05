@@ -27,3 +27,15 @@ zcat output.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.
 strain_select.sh
 
 ## select proper SNP loci
+SNP selection for identification.R
+
+# KEGG pathway prediction
+
+cat filevep|grep -v "#"|grep -E "deleterious(|HIGH"|awk '{print $4}'|sort|uniq > filepregene.txt
+upload file to DAVID website
+
+# Disease prediction
+
+gene_select.sh
+
+DO_processing.R
