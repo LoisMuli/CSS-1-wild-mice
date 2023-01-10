@@ -21,9 +21,9 @@ vep --biotype --buffer_size 500 --check_existing --distance 5000 --numbers --reg
 # Genotyping panel
 
 ## select top 50 variants
-zcat line.filter.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(FILTER = 'PASS')" > linepass.vcf
-bcftools merge -0 -Oz -o output.vcf.gz -l inputfile.list
-zcat output.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(AC = 2)" > output_AC2.vcf
+zcat line.filter.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(FILTER = 'PASS')" > linepass.vcf \
+bcftools merge -0 -Oz -o output.vcf.gz -l inputfile.list \
+zcat output.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(AC = 2)" > output_AC2.vcf \
 strain_select.sh
 
 ## select proper SNP loci
