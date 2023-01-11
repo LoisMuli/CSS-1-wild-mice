@@ -1,0 +1,23 @@
+# WGS project rawdata
+
+## data download from NCBI: SRP066591
+
+data number	data name	capture location
+SRR3438458	BLD		Balidian, Zhejiang 八里店
+SRR3438460	TW		Tianwang, Jiangsu 天王
+SRR3438461	TZ		Taizhou, Jiangsu 泰州
+SRR3438462	YP		Yangpu, Shanghai 杨浦
+SRR3438463	YX		Yuanxiang, Jiangsu 袁巷
+SRR3438464	ZC		Zhicheng, Zhejiang 雉城
+SRR3438465	ZZ1		Zaozhuang 1, Shandong 枣庄
+SRR3438466	ZZ2		Zaozhuang 2, Shandong 枣庄
+SRR3438467	DX		Daxin, Guangxi 大新
+SRR3438468	FX		Fengxian, Shanghai 奉贤
+SRR3438469	HZ		Hangzhou, Zhejiang 杭州
+SRR3438470	JD		Jiading, Shanghai 嘉定
+SRR3438471	PD		Pudong, Shanghai 浦东
+SRR3438472	QP		Qingpu, Shanghai 青浦
+SRR3438473	SMX		Sanmenxia, Henan 三门峡
+SRR3438474	SY		Shenyang, Liaoning 沈阳
+SRR2954707	KM		Kunmin Mouse
+
