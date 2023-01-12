@@ -20,7 +20,7 @@ conda activate wgs
 # select SNPs passed hard filtration
 for line in $(ls $1);
 do
-zcat $1/${line}/gatk/${line}.filter.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(FILTER = 'PASS')&(CHROM = '$3')" > $2/chr${chr}/pass/${line}_chr${chr}.pass.vcf
+zcat $1/${line}/gatk/${line}.pass.vcf.gz |java -jar /home/GT20286/miniconda3/envs/wgs/share/snpsift-5.1-0/SnpSift.jar filter "(CHROM = '$3')" > $2/chr${chr}/pass/${line}_chr${chr}.pass.vcf
 done
 
 # merge strain and select unique homozygous SNPs
