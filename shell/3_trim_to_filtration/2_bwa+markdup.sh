@@ -24,7 +24,7 @@ gatk MarkDuplicates -I $3/$4/bwa/${outname}.sorted.bam -O $3/$4/bwa/${outname}.s
 echo "** MarkDup done **" &&
 
 ## samtools 构建index
-time samtools index $3/$4/bwa/${outname}.sorted.markdup.bam && echo "** sample samtools index done **" &&
+samtools index $3/$4/bwa/${outname}.sorted.markdup.bam && echo "** sample samtools index done **" &&
 
 ## delete useless file
 rm -rf $3/$4/bwa/${outname}.sorted.markdup_metrics.txt $3/$4/bwa/${outname}.sorted.bam $3/$4/bwa/${outname}.bam && echo "** bwa+markdup done **"
