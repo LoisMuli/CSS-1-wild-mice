@@ -15,7 +15,7 @@ then mkdir -p $3/$4/trim
 fi
 
 ##Trimmomatic质控
-time java -jar ${trimmomatic} PE \
+java -jar ${trimmomatic} PE \
 $2/${input}_1.fastq.gz $2/${input}_2.fastq.gz \
 $3/$4/trim/${outname}_1.clean.fastq.gz $3/$4/trim/${outname}_1.unpaired.fastq.gz \
 $3/$4/trim/${outname}_2.clean.fastq.gz $3/$4/trim/${outname}_2.unpaired.fastq.gz \
