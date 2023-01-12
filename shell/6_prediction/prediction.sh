@@ -39,4 +39,4 @@ then
 
 else
 echo "Try 'prediction_gene_select.sh h' for more information"
-
+fi
