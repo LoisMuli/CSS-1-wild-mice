@@ -39,7 +39,12 @@ gatk VariantFiltration \
 --filter-expression "ReadPosRankSum < -8.000" --filter-name "ReadPosRankSum-8.0" \
 -O $3/$4/gatk/${outname}.filter.vcf.gz
 
+## select PASS SNP
+conda activate wgs
+bcftools filter $3/$4/gatk/${outname}.filter.vcf.gz -i 'FILTER="PASS"' -Oz -o $3/$4/gatk/${outname}.pass.vcf.gz
+conda deactiate
+
 # delete useless file
-rm -rf $3/$4/gatk/${outname}.snp.vcf.gz $3/$4/gatk/${outname}.hc.vcf.gz && \
+rm -rf $3/$4/gatk/${outname}.snp.vcf.gz $3/$4/gatk/${outname}.hc.vcf.gz $3/$4/gatk/${outname}.filter.vcf.gz && \
 echo "** variant calling done **"
 
